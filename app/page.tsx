@@ -1,7 +1,11 @@
-export default function Home() {
+import Intro from '@/components/Intro';
+
+const Home = () => {
   return (
-    <main>
-      <h1 className='text-4xl text-cyan-500'>Waseem Azmy</h1>
+    <main className='flex flex-col items-center px-4'>
+      <Intro />
     </main>
   );
-}
+};
+
+export default Home;

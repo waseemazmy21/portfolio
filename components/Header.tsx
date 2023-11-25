@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
 
-function Header() {
+const Header = () => {
   return (
     <header className='z-[999] relative '>
       <motion.div
@@ -33,6 +33,6 @@ function Header() {
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
