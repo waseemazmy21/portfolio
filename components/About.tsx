@@ -2,16 +2,16 @@
 
 import SectionHeading from './SectionHeading';
 import { motion } from 'framer-motion';
+import { useSectionInView } from '@/lib/hooks';
 
 const About = () => {
+  const { ref } = useSectionInView('about');
+
   return (
     <motion.section
+      ref={ref}
       id='about'
       className=' max-w-[45rem] mb-28 sm:mb-40 scroll-mt-28 text-center leading-8'
-      // initial={{ opacity: 0, y: 100 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ once: true }}
-      // transition={{ duration: 1 }}
     >
       <SectionHeading>about me</SectionHeading>
       <p>
