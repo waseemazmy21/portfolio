@@ -2,6 +2,7 @@ import React from 'react';
 import movies from '@/public/movies.png';
 import rmtdevImg from '@/public/rmtdev.png';
 import wordanalyticsImg from '@/public/wordanalytics.png';
+import { LuGraduationCap } from 'react-icons/lu';
 
 export const links = [
   {
@@ -20,10 +21,10 @@ export const links = [
     name: 'skills',
     hash: '#skills',
   },
-  // {
-  //   name: 'experience',
-  //   hash: '#experience',
-  // },
+  {
+    name: 'experience',
+    hash: '#experience',
+  },
   {
     name: 'contact',
     hash: '#contact',
@@ -67,4 +68,14 @@ export const skillsData = [
   'Git',
   'Tailwind',
   'Framer Motion',
+] as const;
+
+export const experiencesData = [
+  {
+    title: 'Bachelor degree in Computer Science',
+    location: 'Sohag University',
+    description: '',
+    date: '2020-2024 (Expexted)',
+    icon: React.createElement(LuGraduationCap),
+  },
 ] as const;
