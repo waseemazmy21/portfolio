@@ -7,9 +7,11 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/contexts/active-section-context';
 
 export default function Intro() {
-  const { ref } = useSectionInView('home', .5);
+  const { ref } = useSectionInView('home', 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -75,6 +77,10 @@ export default function Intro() {
         }}
       >
         <Link
+          onClick={() => {
+            setActiveSection('contact');
+            setTimeOfLastClick(Date.now());
+          }}
           href='#contact'
           className='group btn bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full hover:bg-gray-950 '
         >

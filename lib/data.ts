@@ -61,7 +61,8 @@ export const skillsData = [
   'JavaScript',
   'TypeScript',
   'Python',
-  'React',
+  'React.js',
+  'next.js',
   'Node.js',
   'HTML',
   'CSS',
@@ -72,10 +73,11 @@ export const skillsData = [
 
 export const experiencesData = [
   {
-    title: 'Bachelor degree in Computer Science',
+    title: "Bachelor's Degree in Computer Science",
     location: 'Sohag University',
-    description: '',
-    date: '2020-2024 (Expexted)',
+    description:
+      'Currently pursuing a education in Computer Science at Sohag University, with an expected graduation date in 2024. Engaging in a diverse range of courses and projects to build a strong foundation in the field.',
+    date: '2020-2024 (Expected)',
     icon: React.createElement(LuGraduationCap),
   },
 ] as const;
