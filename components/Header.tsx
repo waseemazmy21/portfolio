@@ -12,9 +12,9 @@ const Header = () => {
     <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className='fixed top-0 sm:top-7 left-0 right-0 sm:mx-auto sm:w-min z-[999] bg-white sm:rounded-full'
+      className="fixed top-0 sm:top-7 left-0 right-0 sm:mx-auto sm:w-min z-[999] bg-white  dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 sm:rounded-full"
     >
-      <ul className='p-2 sm:px-3 sm:py-2 flex items-center justify-center flex-wrap sm:flex-nowrap gap-1 sm:gap-5 text-[0.9rem] font-medium text-gray-500 capitalize'>
+      <ul className="p-2 sm:px-3 sm:py-2 flex items-center justify-center flex-wrap sm:flex-nowrap gap-1 sm:gap-5 text-[0.9rem] font-medium text-gray-500 capitalize">
         {links.map((link) => (
           <motion.li
             key={link.hash}
@@ -28,14 +28,16 @@ const Header = () => {
             <Link
               href={link.hash}
               className={`block relative ${
-                activeSection == link.name ? 'text-gray-950' : ''
-              } hover:text-gray-950 px-2 py-1.5 sm:px-3 sm:py-2`}
+                activeSection === link.name
+                  ? 'text-gray-950 dark:text-gray-200'
+                  : ''
+              } hover:text-gray-950 dark:hover:text-gray-300 px-2 py-1.5 sm:px-3 sm:py-2`}
             >
               {link.name}
               {activeSection == link.name && (
                 <motion.span
-                  className='bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800'
-                  layoutId='activeSection'
+                  className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                  layoutId="activeSection"
                   transition={{
                     type: 'spring',
                     stiffness: 380,

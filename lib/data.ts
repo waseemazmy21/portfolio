@@ -1,7 +1,7 @@
 import React from 'react';
 import movies from '@/public/movies.png';
-import rmtdevImg from '@/public/rmtdev.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
+import massimo from '@/public/massimo.png';
+import budget from '@/public/budget.png';
 import { LuGraduationCap } from 'react-icons/lu';
 
 export const links = [
@@ -33,26 +33,31 @@ export const links = [
 
 export const projectsData = [
   {
+    title: 'Massimo',
+    description:
+      'Developed a responsive restaurant web application, ensuring a polished and user-friendly interface for a seamless and enjoyable customer experience. Implemented an intuitive Shopping Cart System',
+    tags: ['React', 'TypeScript', 'Tailwind CSS'],
+    imageUrl: massimo,
+    githubRepo: 'https://github.com/waseemazmy21/massimo_resturant',
+    live: 'https://waseemazmy21.github.io/massimo_resturant/',
+  },
+  {
     title: 'Movie Watch List App',
     description:
       'A responsive web application for managing your movie watch list and keeping track of watched movies. Integrates with the OMDb API to fetch movie details.',
     tags: ['React', 'Tailwind CSS', 'Daisy UI', 'OMDb API'],
     imageUrl: movies,
-  },
-
-  {
-    title: 'rmtDev',
-    description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: rmtdevImg,
+    githubRepo: 'https://github.com/waseemazmy21/movie-watchlist-app',
+    live: 'https://waseemazmy21.github.io/movie-watchlist-app/',
   },
   {
-    title: 'Word Analytics',
+    title: 'Budget app',
     description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-    imageUrl: wordanalyticsImg,
+      'Created a user-friendly application enabling users to efficiently manage their budgets by adding, tracking, and categorizing expenses within specified budget categories',
+    tags: ['React', 'React Bootstrap'],
+    imageUrl: budget,
+    githubRepo: 'https://github.com/waseemazmy21/budget-app',
+    live: 'https://waseemazmy21.github.io/budget-app/',
   },
 ] as const;
 
