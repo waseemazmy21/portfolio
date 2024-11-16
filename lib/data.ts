@@ -1,88 +1,118 @@
-import React from 'react';
-import movies from '@/public/movies.png';
-import massimo from '@/public/massimo.png';
-import budget from '@/public/budget.png';
-import { LuGraduationCap } from 'react-icons/lu';
+import React from "react";
+import movies from "@/public/movies.png";
+import massimo from "@/public/massimo.png";
+import budget from "@/public/budget.png";
+import herafy from "@/public/herafy.jpg";
+import { LuBriefcase, LuGraduationCap } from "react-icons/lu";
+import { Project } from "@/lib/types";
 
 export const links = [
   {
-    name: 'home',
-    hash: '#home',
+    name: "home",
+    hash: "#home",
   },
   {
-    name: 'about',
-    hash: '#about',
+    name: "about",
+    hash: "#about",
   },
   {
-    name: 'projects',
-    hash: '#projects',
+    name: "projects",
+    hash: "#projects",
   },
   {
-    name: 'skills',
-    hash: '#skills',
+    name: "skills",
+    hash: "#skills",
   },
   {
-    name: 'experience',
-    hash: '#experience',
+    name: "experience",
+    hash: "#experience",
   },
   {
-    name: 'contact',
-    hash: '#contact',
+    name: "contact",
+    hash: "#contact",
   },
 ] as const;
 
-export const projectsData = [
+export const projectsData: Project[] = [
   {
-    title: 'Massimo',
+    title: "Herafy",
     description:
-      'Developed a responsive restaurant web application, ensuring a polished and user-friendly interface for a seamless and enjoyable customer experience. Implemented an intuitive Shopping Cart System',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
+      "Developed a full-stack freelance platform connecting clients and craftsmen with secure authentication, job, proposals, and user management.",
+    tags: ["Next.js", "Node.js", "Express.js", "MongoDB", "Shadcn", "TS"],
+    imageUrl: herafy,
+    githubRepo_1: "https://github.com/waseemazmy21/herafy-client",
+    githubRepo_2: "https://github.com/waseemazmy21/herafy-back-end",
+  },
+  {
+    title: "Massimo",
+    description:
+      "Developed a responsive restaurant web app with a polished interface and an intuitive shopping cart system for a seamless user experience.",
+    tags: ["React", "TypeScript", "Tailwind CSS"],
     imageUrl: massimo,
-    githubRepo: 'https://github.com/waseemazmy21/massimo_resturant',
-    live: 'https://waseemazmy21.github.io/massimo_resturant/',
+    githubRepo_1: "https://github.com/waseemazmy21/massimo_resturant",
+    live: "https://waseemazmy21.github.io/massimo_resturant/",
   },
   {
-    title: 'Movie Watch List App',
+    title: "Movie Watch List App",
     description:
-      'A responsive web application for managing your movie watch list and keeping track of watched movies. Integrates with the OMDb API to fetch movie details.',
-    tags: ['React', 'Tailwind CSS', 'Daisy UI', 'OMDb API'],
+      "A responsive web application for managing your movie watch list and keeping track of watched movies. Integrates with the OMDb API to fetch movie details.",
+    tags: ["React", "Tailwind CSS", "Daisy UI", "OMDb API"],
     imageUrl: movies,
-    githubRepo: 'https://github.com/waseemazmy21/movie-watchlist-app',
-    live: 'https://waseemazmy21.github.io/movie-watchlist-app/',
+    githubRepo_1: "https://github.com/waseemazmy21/movie-watchlist-app",
+    live: "https://waseemazmy21.github.io/movie-watchlist-app/",
   },
   {
-    title: 'Budget app',
+    title: "Budget app",
     description:
-      'Created a user-friendly application enabling users to efficiently manage their budgets by adding, tracking, and categorizing expenses within specified budget categories',
-    tags: ['React', 'React Bootstrap'],
+      "Created a user-friendly application enabling users to efficiently manage their budgets by adding, tracking, and categorizing expenses within specified budget categories",
+    tags: ["React", "React Bootstrap"],
     imageUrl: budget,
-    githubRepo: 'https://github.com/waseemazmy21/budget-app',
-    live: 'https://waseemazmy21.github.io/budget-app/',
+    githubRepo_1: "https://github.com/waseemazmy21/budget-app",
+    live: "https://waseemazmy21.github.io/budget-app/",
   },
-] as const;
+];
 
 export const skillsData = [
-  'c++',
-  'JavaScript',
-  'TypeScript',
-  'Python',
-  'React.js',
-  'next.js',
-  'Node.js',
-  'HTML',
-  'CSS',
-  'Git',
-  'Tailwind',
-  'Framer Motion',
+  "c++",
+  "JavaScript",
+  "TypeScript",
+  "Python",
+  "React.js",
+  "next.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "SQL",
+  "HTML",
+  "CSS",
+  "Git",
+  "Tailwind",
+  "Framer Motion",
 ] as const;
 
 export const experiencesData = [
   {
-    title: "Bachelor's Degree in Computer Science",
-    location: 'Sohag University',
+    title: "Android Developer Intern",
+    location: "Coptic Orphans, Cairo, Egypt",
     description:
-      'Currently pursuing a education in Computer Science at Sohag University, with an expected graduation date in 2024. Engaging in a diverse range of courses and projects to build a strong foundation in the field.',
-    date: '2020-2024 (Expected)',
+      "Contributed to the development of Android applications using Jetpack Compose and Kotlin. Implemented Clean Architecture and MVVM patterns, integrated REST APIs with Retrofit, and wrote unit and UI tests to ensure quality and scalability.",
+    date: "Jul 2024 – Aug 2024",
+    icon: React.createElement(LuBriefcase),
+  },
+  {
+    title: "Front-End Freelance Developer",
+    location: "Upwork (Remote)",
+    description:
+      "Developed responsive and user-friendly web pages using HTML, CSS, and JavaScript. Built dynamic components with React.js, collaborated with clients, and delivered high-quality results aligned with client requirements and deadlines.",
+    date: "Aug 2023 – Present",
+    icon: React.createElement(LuBriefcase),
+  },
+  {
+    title: "Bachelor's Degree in Computer Science",
+    location: "Sohag University",
+    description:
+      "Graduated with a Bachelor's Degree in Computer Science, specializing in Artificial Intelligence, with a GPA of 3.53/4. Built a strong foundation in algorithms, data structures, and programming, complemented by hands-on experience through academic and personal projects.",
+    date: "Oct 2020 - Jul 2024",
     icon: React.createElement(LuGraduationCap),
   },
 ] as const;

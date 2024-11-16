@@ -63,8 +63,7 @@ export default function Intro() {
       >
         <h1 className="mb-10 font-bold sm:text-4xl">Hi, I'm Waseem</h1>
         <span className="block">
-          I'm an undergraduate student studying CS, and I have a passion for
-          software development and problem-solving
+        I’m a recent graduate with a degree in Computer Science, passionate about software development and problem-solving.
         </span>
       </motion.div>
 

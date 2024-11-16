@@ -1,26 +1,26 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { projectsData } from '@/lib/data';
-import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { FiGithub } from 'react-icons/fi';
-import { HiOutlineExternalLink } from 'react-icons/hi';
-
-type ProjectProps = (typeof projectsData)[number];
+import { useRef } from "react";
+import { projectsData } from "@/lib/data";
+import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { FiGithub } from "react-icons/fi";
+import { HiOutlineExternalLink } from "react-icons/hi";
+import { Project as ProjectType } from "@/lib/types";
 
 export default function Project({
   title,
   description,
   tags,
   imageUrl,
-  githubRepo,
+  githubRepo_1,
+  githubRepo_2,
   live,
-}: ProjectProps) {
+}: ProjectType) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['0 1', '1.33 1'],
+    offset: ["0 1", "1.33 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
@@ -70,18 +70,31 @@ export default function Project({
         group-even:right-[initial] group-even:-left-40"
         />
         <div className="hidden group-hover:flex absolute top-5 right-4 sm:group-even:left-4 sm:group-even:right-auto  gap-2 justify-center ">
-          <a
-            href={githubRepo}
-            className="btn flex gap-1 items-center bg-black/[0.7] text-white   px-3 py-1  rounded-full"
-          >
-            <FiGithub />
-          </a>
-          <a
-            href={live}
-            className="btn flex gap-1 items-center bg-black/[0.7] text-white   px-3 py-1  rounded-full"
-          >
-            <HiOutlineExternalLink />
-          </a>
+          {githubRepo_1 && (
+            <a
+              href={githubRepo_1}
+              className="btn flex gap-1 items-center bg-black/[0.7] text-white   px-3 py-1  rounded-full"
+            >
+              <FiGithub />
+            </a>
+          )}
+
+          {githubRepo_2 && (
+            <a
+              href={githubRepo_2}
+              className="btn flex gap-1 items-center bg-black/[0.7] text-white   px-3 py-1  rounded-full"
+            >
+              <FiGithub />
+            </a>
+          )}
+          {live && (
+            <a
+              href={live}
+              className="btn flex gap-1 items-center bg-black/[0.7] text-white   px-3 py-1  rounded-full"
+            >
+              <HiOutlineExternalLink />
+            </a>
+          )}
         </div>
       </section>
     </motion.div>
