@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React, { useRef } from 'react';
-import SectionHeading from './SectionHeading';
-import { motion } from 'framer-motion';
-import { useSectionInView } from '@/lib/hooks';
-import SubmitBtn from './SubmitBtn';
-import { sendEmail } from '@/actions/sendEmail';
-import { toast } from 'react-toastify';
+import React, { useRef } from "react";
+import SectionHeading from "./SectionHeading";
+import { motion } from "framer-motion";
+import { useSectionInView } from "@/lib/hooks";
+import SubmitBtn from "./SubmitBtn";
+import { sendEmail } from "@/actions/sendEmail";
+import { toast } from "react-toastify";
 
 const Contact = () => {
-  const { ref } = useSectionInView('contact');
+  const { ref } = useSectionInView("contact");
 
   return (
     <motion.section
@@ -32,27 +32,27 @@ const Contact = () => {
       <SectionHeading>Contact me</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{' '}
+        Please contact me directly at{" "}
         <a className="underline" href="mailto:waseemazmy21@gmail.com">
           waseemazmy21@gmail.com
-        </a>{' '}
-        or through this form.
+        </a>{" "}
+        {/* or through this form. */}
       </p>
-      <form
+      {/* <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           const { error } = await sendEmail(formData);
           if (error) {
             toast.error(error, {
               position: toast.POSITION.BOTTOM_RIGHT,
-              className: 'foo-bar',
+              className: "foo-bar",
               hideProgressBar: true,
             });
             return;
           }
-          toast.success('Email sent successfully.', {
+          toast.success("Email sent successfully.", {
             position: toast.POSITION.BOTTOM_RIGHT,
-            className: 'foo-bar',
+            className: "foo-bar",
             hideProgressBar: true,
           });
         }}
@@ -73,7 +73,7 @@ const Contact = () => {
           maxLength={5000}
         />
         <SubmitBtn />
-      </form>
+      </form> */}
     </motion.section>
   );
 };
