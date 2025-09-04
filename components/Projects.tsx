@@ -11,7 +11,7 @@ const Projects = () => {
     <section ref={ref} id='projects' className='mb-28 scroll-mt-28'>
       <SectionHeading>my projects</SectionHeading>
       <div>
-        {projectsData.map((projectData) => (
+        {projectsData.slice(0, 3).map((projectData) => (
           <Project key={projectData.title} {...projectData} />
         ))}
       </div>
