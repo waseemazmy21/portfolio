@@ -3,6 +3,8 @@ import movies from "@/public/movies.png";
 import massimo from "@/public/massimo.png";
 import budget from "@/public/budget.png";
 import herafy from "@/public/herafy.jpg";
+import amlak from "@/public/amlak.png";
+import medsync from "@/public/medsync.png";
 import { LuBriefcase, LuGraduationCap } from "react-icons/lu";
 import { Project } from "@/lib/types";
 
@@ -34,6 +36,25 @@ export const links = [
 ] as const;
 
 export const projectsData: Project[] = [
+  {
+    title: "Amlak",
+    description:
+      "Developed a full-stack Real State platform with secure authentication, property listings, and user management.",
+    tags: ["Next.js", "Node.js", "Express.js", "MongoDB", "Shadcn", "TS"],
+    imageUrl: amlak,
+    githubRepo_1: "https://github.com/waseemazmy21/amlak-client",
+    githubRepo_2: "https://github.com/waseemazmy21/amlak-backend",
+    live: "https://amlak-client.vercel.app/home",
+  },
+  {
+    title: "MedSync",
+    description:
+      "Backend for hopsital management system with secure authentication, role-based access control, appointments, notifications, and user management.",
+    tags: ["Node.js", "NestJS", "Express.js", "MongoDB", "Socket.io", "TypeScript", "JWT", "Swagger API Docs"],
+    imageUrl: medsync,
+    githubRepo_1: "https://github.com/waseemazmy21/medSync-backend",
+    live: "https://medsync-backend-production.up.railway.app/api",
+  },
   {
     title: "Herafy",
     description:
@@ -80,9 +101,11 @@ export const skillsData = [
   "React.js",
   "next.js",
   "Node.js",
+  "NestJS",
   "Express.js",
   "MongoDB",
   "SQL",
+  "AWS",
   "HTML",
   "CSS",
   "Git",
@@ -91,6 +114,14 @@ export const skillsData = [
 ] as const;
 
 export const experiencesData = [
+  {
+    title: "Full-Stack Developer Trainee",
+    location: "ITI, Sohag, Egypt",
+    description:
+      "Hands-on training in full-stack web development, covering front-end and back-end technologies, databases, version control, and deployment. Gained practical experience through projects and collaborative work.",
+    date: "Feb 2025 – Aug 2025",
+    icon: React.createElement(LuBriefcase),
+  },
   {
     title: "Android Developer Intern",
     location: "Coptic Orphans, Cairo, Egypt",
